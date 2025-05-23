@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Los Renacidos - Podcast</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          screens: {
+            'xs': '480px'
+          },
+          colors: {
+            primary: '#1e3a8a',
+            secondary: '#6366f1',
+            dark: '#111827'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900">
+
+  <!-- Asistente interactivo mejorado -->
+  <div class="fixed bottom-6 right-6 z-50">
+    <button id="assistantToggle" class="bg-white rounded-full shadow-lg p-3 hover:bg-gray-100 transition" title="Asistente virtual">
+      <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png" alt="Asistente" class="w-10 h-10">
+    </button>
+    <div id="assistantBox" class="hidden bg-white p-4 rounded-lg shadow-xl mt-2 w-72 text-left">
+      <h4 class="font-bold text-lg mb-2">Asistente Virtual</h4>
+      <p class="text-sm text-gray-700 mb-2">¿Qué deseas saber sobre Java?</p>
+      <ul class="space-y-1 text-sm">
+        <li><button onclick="alert('Java es un lenguaje de programación orientado a objetos, multiplataforma y de propósito general.')" class="text-blue-600 hover:underline">¿Qué es Java?</button></li>
+        <li><button onclick="alert('Las sentencias de control permiten tomar decisiones y repetir acciones en un programa Java.')" class="text-blue-600 hover:underline">¿Para qué sirven las sentencias de control?</button></li>
+        <li><button onclick="alert('Un bucle for se utiliza cuando sabes cuántas veces deseas repetir una acción.')" class="text-blue-600 hover:underline">¿Qué es un bucle for?</button></li>
+        <li><button onclick="alert('Un if/else evalúa una condición booleana y ejecuta uno u otro bloque de código según el resultado.')" class="text-blue-600 hover:underline">¿Qué hace un if/else?</button></li>
+        <li><button onclick="alert('Un switch permite seleccionar entre múltiples opciones con base en el valor de una variable.')" class="text-blue-600 hover:underline">¿Qué es un switch?</button></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Aquí se debe insertar el resto del contenido original del sitio -->
+    <!-- Encabezado -->
+  <header class="bg-gradient-to-r from-primary via-secondary to-primary text-white p-6 fixed top-0 w-full z-40 shadow-lg">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Los Renacidos</h1>
+      <div class="md:hidden">
+        <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+      <nav class="hidden md:flex space-x-4 text-sm md:text-base">
+        <a href="#inicio" class="hover:text-gray-300">Inicio</a>
+        <a href="#java" class="hover:text-gray-300">Sentencias</a>
+        <a href="#if" class="hover:text-gray-300">If / Else</a>
+        <a href="#switch" class="hover:text-gray-300">Switch</a>
+        <a href="#bucles" class="hover:text-gray-300">Bucles</a>
+        <a href="#temas" class="hover:text-gray-300">Temas</a>
+        <a href="#sobre" class="hover:text-gray-300">Sobre</a>
+        <a href="#musica" class="hover:text-gray-300">Spotify</a>
+      </nav>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden px-4 pt-4 pb-2 bg-secondary text-white">
+      <a href="#inicio" class="block py-2 hover:text-gray-300">Inicio</a>
+      <a href="#java" class="block py-2 hover:text-gray-300">Sentencias</a>
+      <a href="#if" class="block py-2 hover:text-gray-300">If / Else</a>
+      <a href="#switch" class="block py-2 hover:text-gray-300">Switch</a>
+      <a href="#bucles" class="block py-2 hover:text-gray-300">Bucles</a>
+      <a href="#temas" class="block py-2 hover:text-gray-300">Temas</a>
+      <a href="#sobre" class="block py-2 hover:text-gray-300">Sobre</a>
+      <a href="#musica" class="block py-2 hover:text-gray-300">Spotify</a>
+    </div>
+  </header>
+
+  <main class="pt-28">
+    <!-- Inicio -->
+    <section id="inicio" class="py-16 text-center bg-white" data-sr>
+      <div class="max-w-4xl mx-auto px-6">
+        <img src="https://www.bluethink.in/wp-content/uploads/2021/09/java-banner1-1.jpg" alt="Banner Podcast" class="mx-auto rounded-lg shadow-md mb-6">
+        <h2 class="text-4xl font-bold mb-4">Podcast "Los Renacidos"</h2>
+        <p class="text-lg text-gray-700">
+          Página dedicada a la enseñanza de sentencias de control en JAVA a través de episodios claros, dinámicos y educativos.
+        </p>
+        <div class="aspect-w-16 aspect-h-9">
+          <iframe class="w-full h-96 mx-auto" 
+        src="https://www.youtube.com/embed//E8weQyNVWug?si=j7dmQq37HFH9owRQ" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- Ejemplo de sección Java -->
+  <main class="pt-28">
+    <section id="java" class="py-16 bg-gray-100" data-sr>
+      <div class="max-w-4xl mx-auto px-6">
+        <h3 class="text-3xl font-bold mb-6 text-center">¿Qué son las Sentencias de Control en Java?</h3>
+        <p class="text-gray-700 mb-4">
+          Las sentencias de control en Java permiten decidir qué bloques de código ejecutar dependiendo de ciertas condiciones. Estas estructuras son esenciales en cualquier lenguaje de programación y permiten controlar el flujo de un programa.
+        </p>
+        <p class="text-gray-700 mb-4">
+          Java incluye sentencias de control condicional como <code>if</code>, <code>else</code> y <code>switch</code>, así como estructuras repetitivas como <code>for</code>, <code>while</code> y <code>do-while</code>. Gracias a estas herramientas, los programadores pueden crear algoritmos complejos, responder a condiciones en tiempo real y automatizar tareas repetitivas de forma eficiente.
+        </p>
+        <p class="text-gray-700">
+          También existen sentencias de salto como <code>break</code>, <code>continue</code> y <code>return</code>, que permiten alterar la ejecución del flujo desde dentro de ciclos o métodos.
+        </p>
+        <img src="https://cdn.icon-icons.com/icons2/2415/PNG/512/java_original_logo_icon_146458.png" alt="Java Logo" class="mx-auto w-24 h-24">
+      </div>
+    </section>
+
+    <section id="if" class="py-16 bg-white" data-sr>
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <h3 class="text-2xl font-bold mb-4">Sentencia If / Else</h3>
+        <p class="text-gray-700">Permite ejecutar código condicionalmente dependiendo de si una expresión es verdadera o falsa.</p>
+        <pre class="bg-gray-800 text-green-200 text-sm p-4 mt-6 rounded-lg shadow-md overflow-x-auto text-left">
+if (edad >= 18) {
+  System.out.println("Eres mayor de edad");
+} else {
+  System.out.println("Eres menor de edad");
+}</pre>
+      </div>
+    </section>
+
+    <section id="switch" class="py-16 bg-gray-100" data-sr>
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <h3 class="text-2xl font-bold mb-4">Sentencia Switch</h3>
+        <p class="text-gray-700">Permite seleccionar entre múltiples opciones según el valor de una variable.</p>
+        <pre class="bg-gray-800 text-green-200 text-sm p-4 mt-6 rounded-lg shadow-md overflow-x-auto text-left">
+switch(dia) {
+  case 1:
+    System.out.println("Lunes");
+    break;
+  case 2:
+    System.out.println("Martes");
+    break;
+  default:
+    System.out.println("Otro día");
+}</pre>
+      </div>
+    </section>
+
+    <section id="bucles" class="py-16 bg-white" data-sr>
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <h3 class="text-2xl font-bold mb-4">Bucles: For, While y Do-While</h3>
+        <p class="text-gray-700">Estructuras que repiten un bloque de código mientras se cumpla una condición.</p>
+        <pre class="bg-gray-800 text-green-200 text-sm p-4 mt-6 rounded-lg shadow-md overflow-x-auto text-left">
+for (int i = 0; i < 5; i++) {
+  System.out.println(i);
+}
+
+int i = 0;
+while (i < 5) {
+  System.out.println(i);
+  i++;
+}
+
+do {
+  System.out.println(i);
+  i++;
+} while (i < 5);
+</pre>
+      </div>
+    </section>
+
+    <section id="temas" class="py-16 bg-gray-100" data-sr>
+      <div class="max-w-4xl mx-auto px-6">
+        <h3 class="text-3xl font-bold text-center mb-8">Temas del Podcast</h3>
+        <ul class="list-disc list-inside text-gray-700 text-left space-y-2">
+          <li>Sentencias de control en Java</li>
+          <li>Errores comunes al programar</li>
+          <li>Recomendaciones para principiantes</li>
+          <li>Experiencias reales de estudiantes</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="sobre el podcast" class="py-16 bg-white" data-sr>
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <h3 class="text-3xl font-bold mb-4">Sobre "Los Renacidos"</h3>
+        <p class="text-gray-700 max-w-2xl mx-auto">
+          Un podcast educativo creado por estudiantes, con la misión de explicar la lógica de programación en Java de forma simple, amena y clara para todos.
+        </p>
+      </div>
+    </section>
+     <div class="aspect-w-16 aspect-h-9">
+          <iframe class="w-full h-96 mx-auto" 
+        src="https://www.youtube.com/embed//SZL95U0a4T8?si=npr8Ul4pJBkWnARJ" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- Spotify -->
+    <section id="musica" class="py-16 bg-white text-center" data-sr>
+      <div class="max-w-4xl mx-auto px-6">
+        <h3 class="text-3xl font-bold mb-6">Escucha música mientras navegas</h3>
+        <p class="text-gray-700 mb-4">Disfruta de nuestra playlist oficial en Spotify mientras aprendes sobre Java.</p>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DWYs83FtTMQFw?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-primary text-white text-center py-6">
+    <p>© 2025 Los Renacidos. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    ScrollReveal().reveal('[data-sr]', {
+      duration: 1000,
+      origin: 'bottom',
+      distance: '50px',
+      easing: 'ease-in-out',
+      reset: false
+    });
+
+    document.getElementById('assistantToggle').addEventListener('click', () => {
+      const box = document.getElementById('assistantBox');
+      box.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
+
