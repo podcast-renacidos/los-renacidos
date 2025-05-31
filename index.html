@@ -210,8 +210,36 @@ do {
   <footer class="bg-primary text-white text-center py-6">
     <p>© 2025 Los Renacidos. Todos los derechos reservados.</p>
   </footer>
+  <!-- Contador de visitas y confeti -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+<script>
+  // contador con almacenamiento local
+  document.addEventListener('DOMContentLoaded', () => {
+    let visitas = localStorage.getItem('contadorVisitas');
+    if (!visitas) {
+      visitas = 1;
+      confetti({
+        particleCount: 150,
+        spread: 70,
+        origin: { y: 0.6 }
+      });
+      setTimeout(() => {
+        alert('¡Gracias por visitar Los Renacidos! 🎉');
+      }, 100);
+    } else {
+      visitas = parseInt(visitas) + 1;
+    }
+    localStorage.setItem('contadorVisitas', visitas);
+    const contador = document.createElement('div');
+    contador.innerHTML = `
+      <div class="fixed bottom-2 left-2 bg-white text-sm text-gray-800 px-4 py-2 rounded shadow">
+        Visitas en este navegador: <strong>${visitas}</strong>
+      </div>`;
+    document.body.appendChild(contador);
+  });
+</script>
 
-  <script>
+<script>
     ScrollReveal().reveal('[data-sr]', {
       duration: 1000,
       origin: 'bottom',
